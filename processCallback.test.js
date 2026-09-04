@@ -12,11 +12,21 @@ test("when supplied with a callback function then callback function is called tw
 })
 
 test("when supplied with a callback function then callback function is called twice", () => {
+  // GIVEN
   const callbackFunction = jest.fn();
   
+  // WHEN
   processCallback(callbackFunction);
 
+  // THEN
   expect(callbackFunction).toHaveBeenCalled();
   expect(callbackFunction).toHaveBeenCalledWith("Hello");
   expect(callbackFunction).toHaveBeenCalledWith("Goodbye");
 })
+
+/*
+ * Given/when/then is equivalent to AAA
+ * A - ARRANGE
+ * A - ACTION
+ * A - ASSERTION
+*/
